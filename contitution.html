@@ -13,7 +13,7 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-
+    <link rel="stylesheet" href="css/constitution.css"
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,7 +24,14 @@
   </head>
   <body class="container">
 
- <div id="menu" class="col-sm-4">
+<header class="slide">     <!-- Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+    <ul id="navToggle" class="burger slide">    <!--  Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+ <li></li><li></li><li></li>
+    </ul>
+    <h1>US Constitution</h1>
+  </header>
+
+ <nav id="menu" class="slide col-sm-4 hidden-xs">
 <h2></h2>
 
 <ul style="list-style-type:none">
@@ -64,14 +71,9 @@
 <li><a href="#am27">Ammendment XXVII</a></li>
 </ul>
 
+ </nav>
 
-
-
-
-
- </div>
-
-<div id="main" class="col-sm-8">
+<div id="main" class="col-sm-8 content slide">
 <h2 id="preamble">Preamble</h2>
 <p>
 We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.
@@ -392,7 +394,7 @@ Thereafter, when the President transmits to the President pro tempore of the Sen
 </div> <!-- main -->
 
 <div id="footer" class="col-sm-12" style="height: 100px">
-	&nbsp;
+	Footer
 </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -401,6 +403,7 @@ Thereafter, when the President transmits to the President pro tempore of the Sen
 
         <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <Script src="js/trunk.js"></script>
    
   </body>
 </html>
