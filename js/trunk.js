@@ -10,7 +10,7 @@ $(function() {
     }
     
     $("#sidebar").affix({
-        offset: { top: 20 }
+        offset: { top: 5 }
     });
 
     var clickevent = mobilecheck() ? 'touchstart' : 'click';
@@ -25,22 +25,19 @@ $(function() {
             .removeClass("affix affix-top affix-bottom")
             .removeData("bs.affix");
 
-
-        $(items).removeClass('closed').addClass('opened');
         $('nav').removeClass('hidden-xs');
         $(content).hide();
-        $('html, body').animate({ scrollTop : 0 }, "slow");
+        // $('html, body').animate({ scrollTop : 0 }, "slow");
         return false;
     }
 
     function close() {
         
         $("#sidebar").affix({
-        offset: { top: 20 }
+        offset: { top: 5 }
     });
         
 
-        $(items).removeClass('opened').addClass('closed');
         $(content).show();
         $('nav').addClass('hidden-xs');
      }
