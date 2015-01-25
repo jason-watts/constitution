@@ -8,21 +8,40 @@ $(function() {
         })(navigator.userAgent || navigator.vendor || window.opera);
         return check;
     }
+    
+    $("#sidebar").affix({
+        offset: { top: 20 }
+    });
+
     var clickevent = mobilecheck() ? 'touchstart' : 'click';
 
     var items = $('.slide');
     var content = $('.content');
 
     function open() {
+
+        $(window).off('.affix');
+        $("#sidebar")
+            .removeClass("affix affix-top affix-bottom")
+            .removeData("bs.affix");
+
+
         $(items).removeClass('closed').addClass('opened');
         $('nav').removeClass('hidden-xs');
-
+        $(content).hide();
         $('html, body').animate({ scrollTop : 0 }, "slow");
         return false;
     }
 
     function close() {
+        
+        $("#sidebar").affix({
+        offset: { top: 20 }
+    });
+        
+
         $(items).removeClass('opened').addClass('closed');
+        $(content).show();
         $('nav').addClass('hidden-xs');
      }
 

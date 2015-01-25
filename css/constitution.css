@@ -15,9 +15,8 @@ header h1 {
 }
 
 nav {
-	position: relative;
-	top: 0;
-	right: 5px;
+	position: fixed;
+	top: 20px;
 }
 nav li {
 	display: block;
@@ -145,7 +144,7 @@ nav.closed {
 
 /*Content Sliding Open Effect*/
 header.opened,
-.content.opened 
+.content.openedd 
 {   
 	-webkit-transform: translate3d(240px,0,0);
 	-webkit-animation: open .5s ease-in-out;
